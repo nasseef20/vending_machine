@@ -56,6 +56,17 @@ body {
 .fade-out {
     opacity: 0;
 }
+
+.aqi {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(126, 2, 2);
+    transition: opacity 0.3s ease-out;
+
+}
+
 .bodytext {
     color: #4d4d4d;
     font-size: 1.7rem;
