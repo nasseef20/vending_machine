@@ -1,5 +1,5 @@
 if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/service-worker.js")
+    navigator.serviceWorker.register("/vending_machine/service-worker.js")
       .then(() => console.log("Service Worker Registered"))
       .catch((error) => console.log("Service Worker Registration Failed:", error));
 }  
@@ -17,8 +17,47 @@ function fadeOut() {
         secondpage();
     }, 300);
 }
-weight = 0;
+
+function headToDownloadPage() {
+    document.querySelectorAll(".firstpage").forEach(el => {
+        el.classList.add("fade-out");
+    });
+
+// Prevent multiple calls
+    document.querySelector(".button").disabled = true;
+
+    setTimeout(() => {
+        document.querySelectorAll(".firstpage").forEach(el => el.remove());
+        downloadPage();
+    }, 300);
+}
+
 const container = document.getElementById("container");
+
+function downloadPage() {
+
+    const downloadtext = document.createElement("p");
+    downloadtext.innerHTML = "Scan the QR code to download the app";
+    downloadtext.classList.add("bodytext");
+    container.appendChild(downloadtext);
+
+    const download_qr = document.createElement("img");
+    download_qr.setAttribute("src", "download_qr.png");
+    download_qr.classList.add("qrcode");
+    container.appendChild(download_qr);
+
+    const done = document.createElement("button");
+    done.innerHTML = "Done";
+    done.classList.add("button");
+    container.appendChild(done);
+
+    done.addEventListener("click", function () {
+        location.reload();
+    });
+
+}
+
+weight = 0;
 function secondpage(){
     const firstp = document.createElement("p");
     firstp.innerHTML = "Dump plastic waste into the recycle bin to start";

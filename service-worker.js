@@ -1,14 +1,14 @@
 const CACHE_NAME = "pwa-cache-v1";
 const ASSETS = [
   "/",
-  "/index.html",
-  "/styles.css",
-  "/script.js",
-  "/icons/icon-192x192.png",
-  "/icons/icon-512x512.png",
-  "/recycle_bg.png",
-  "/dummy_qr_code.png",
-  "/logo_horizontal.svg"
+  "/vending_machine/index.html",
+  "/vending_machine/styles.css",
+  "/vending_machine/script.js",
+  "/vending_machine/icons/icon-192x192.png",
+  "/vending_machine/icons/icon-512x512.png",
+  "/vending_machine/recycle_bg.png",
+  "/vending_machine/dummy_qr_code.png",
+  "/vending_machine/logo_horizontal.svg"
 ];
 
 self.addEventListener("install", (event) => {
