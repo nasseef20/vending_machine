@@ -52,7 +52,7 @@ function downloadPage() {
     container.appendChild(done);
 
     done.addEventListener("click", function () {
-        location.reload();
+        window.location.href = "/vending_machine/index.html";
     });
 
 }
@@ -133,7 +133,7 @@ function rewardpage(){
     container.appendChild(redo);
 
     redo.addEventListener("click", function(){
-        location.reload();
+        window.location.href = "/vending_machine/index.html";
     });
 
 }
