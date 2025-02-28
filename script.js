@@ -113,7 +113,7 @@ function rewardpage(){
     container.appendChild(youhaveearned);
 
     const amounttext = document.createElement("p");
-    amounttext.innerHTML = "৳20";
+    amounttext.innerHTML = "৳19.94";
     amounttext.classList.add("amounttext");
     container.appendChild(amounttext);
 
